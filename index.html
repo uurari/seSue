@@ -1,0 +1,1206 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>seSue</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Logo.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Custom.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <style>
+        body { position: relative; }
+        .panel-body { text-align: justify; }
+        .section {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            min-height: 300px;
+            border-bottom-color: #669999;
+            border-bottom-width: 1px;
+            border-bottom-style: dotted;
+        }
+        .panelheadingbackground {
+            background: #0B2F3A; /* Old browsers */
+            background: -moz-linear-gradient(top,  #0B2F3A 0%, #0B2F3A 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #0B2F3A 0%,#0B2F3A 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #0B2F3A 0%,#0B2F3A 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0B2F3A', endColorstr='#0B2F3A',GradientType=0 ); /* IE6-9 */
+        }
+        .panelheadingbackground2 {
+            background: #0A5A72; /* Old browsers */
+            background: -moz-linear-gradient(top,  #0A5A72 0%, #0A5A72 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #0A5A72 0%,#0A5A72 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #0A5A72 0%,#0A5A72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A5A72', endColorstr='#0A5A72',GradientType=0 ); /* IE6-9 */
+        }
+        h3 {
+            text-align: center;
+            background: rgb(69,72,77); /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+            color: #D8D8D8;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            border-radius: 6px;
+        }
+        .jumbotron {
+            background: rgb(69,72,77); /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+            text-align: justify;
+            color: #D8D8D8;
+        }
+        .carousel-control.right, .carousel-control.left {
+            background-image: none;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="10">
+    
+    <!-- #region TOP MENU -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://www.uurari.com"><span class="glyphicon glyphicon-arrow-left"></span> Uğur Arıkan</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#secAbout">About seSue</a></li>
+                        <li><a href="#secDownloads">Downloads</a></li>
+                        <li><a href="#secUserManual">User Manual</a></li>
+                        <li><a href="#secContact">Contact Us</a></li>
+                        <li><a href="#secReferences">References</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion -->
+    
+    <!-- #region BOTTOM MENU -->
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar2">
+                    <ul class="nav navbar-nav navbar-right"><li><a href="http://seTreq.uurari.com"><img src="Logo.png" width="20px" /> seTreq</a></li></ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- #endregion -->
+
+    <div class="container body-content" style="padding-right:0;padding-left:0;">
+        <div class="jumbotron" style="text-align: center;">
+            <h1><img style="border-radius:5px; width:120px;" src="Logo.png" /></h1>
+            <p class="lead" style="font-size: 20px">
+                seSue is an open source tool to aid research on static path-based Stochastic User Equilibrium models.
+            </p>
+        </div>
+
+        <!-- #region secAbout -->
+        <div id="secAbout" class="container section">
+            <h3>About seSue</h3>
+            <div class="row" style="text-align:justify;">
+                <div class="col-md-6">
+                    <h4>What is SUE?</h4>
+                    <p>Stochastic User Equilibrium (SUE) is a relaxation of Wardrop's equilibrium principles which is defined as the <i>traffic equilibrium wherein no driver can unilaterally change routes to improve his/her perceived travel times</i>.</p>
+                    <p>A path-based SUE model alone transforms the following inputs:</p>
+                    <ul>
+                        <li>traffic network topology,</li>
+                        <li>generalized link travel cost functions,</li>
+                        <li>origin-destination (OD) pairs and corresponding OD demands</li>
+                    </ul>
+                    <p>into SUE link and path flows.</p>
+                    <p>On the other hand, SUE is one of the most popular methods that is used as the traffic assignment procedure within many other applications.</p>
+                    <p>Typically, discrete choice models are associated with the stochastic route choice behavior of the users in a SUE model. The same choice model may be assigned for all users or different choice models may be assigned to the users in different OD pairs (hybrid). SUE models are distinguished with respect to the associated discrete choice models as different route choice behaviors lead to different equilibrium flows.</p>
+                    <p>Another factor that significantly affects the equilibrium flows in a path-based SUE model is choice set generation. In a real-sized traffic network, there exist a huge number of cycle-free paths, or routes, connecting an origin to a destination; and possibly infinitely many paths when cycling is allowed. In general, a route choice set containing 'efficient' routes is generated for each OD pair a priori to finding the SUE flows.</p>
+                    <p>Since the users will be assigned to the predetermined routes, the size of the route choice sets and the routes included play an important role in the equilibrium flows. Computationally, the increase in the size of the route choice sets increases the running time for both generating the paths and solving the SUE model; while a small choice set may result in unrealistic assignments.</p>
+                    <br />
+                    <h4>What is seSue?</h4>
+                    <p>seSue is a Windows Forms Application developed with .NET Framework 4.5.</p>
+                    <p>It is designed to carry out experiments to analyze the effects of:</p>
+                    <ul>
+                        <li>different path-based SUE models associated with different underlying discrete choice models (as well as hybrid models), and</li>
+                        <li>different route choice set generation algorithms</li>
+                    </ul>
+                    <p>on the route choice probabilities and equilibrium link flows.</p>
+                    <p>It also allows to carry out sensitivity analysis to predict the effects of perturbations in the OD demands and generalized link travel cost functions.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Features</h4>
+                    <p>Current version of seSue allows to associate the following discrete choice models and their combinations with the path-based SUE model, in addition to the Wardrop's (1952) user equilibrium:</p>
+                    <div class="row" style="text-align:justify;">
+                        <div class="col-md-6">
+                            <div class="panel panel-primary " style="border-color: #0B2F3A;">
+                                <div class="panel-heading panelheadingbackground" >Logit-based Models</div>
+                                <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Multinomial Logit (MNL)</div>
+                                <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Path-Size Logit (PSL)</div>
+                                <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">C-Logit</div>
+                                <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">OD level scaled variants</div>
+                                <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Custom logit models</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-primary  " style="border-color: #0B2F3A;">
+                                <div class="panel-heading panelheadingbackground">Weibit-based Models</div>
+                                <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Multinomial Weibit (MNW)</div>
+                                <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Path-Size Weibit (PSW)</div>
+                                <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Custom weibit models</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary  " style="border-color: #0B2F3A;">
+                        <div class="panel-heading panelheadingbackground">Marginal Distribution Model (MDM) Variants</div>
+                        <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Marginal Exponential Model (MEM)</div>
+                        <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Marginal Normal Model (MNM)</div>
+                        <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">OD and route level scaled variants</div>
+                        <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Custom MDM models</div>
+                    </div>
+                    <p>Path generation algorithms listed below and their combinations can be used to generate the route choice sets of the OD pairs:</p>
+                    <div class="panel panel-primary  " style="border-color: #0B2F3A;">
+                        <div class="panel-heading panelheadingbackground">Path Generation Algorithms</div>
+                        <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Yen's K-shortest path algorithm</div>
+                        <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Dial's efficient path generation algorithm</div>
+                        <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Link penalty algorithm</div>
+                        <div class="panel-body" style="padding-top:5px; padding-bottom:5px;">Link elimination algorithm</div>
+                    </div>
+                    <p>Data files of real cities that can be readily used with seSue are provided in the Downloads section. These data files are converted from the data files published in <a href="http://www.bgu.ac.il/~bargera/tntp/">http://www.bgu.ac.il/~bargera/tntp/</a>, which is an excellent source of transportation network test problems. The website is managed by <a href="http://fohs.bgu.ac.il/research/PersonalWebSite1main.aspx?id=dteVeejV">Professor Hilel Bar-Gera</a> and the data files are provided by valuable researchers. Custom networks can also be created and analyzed with seSue. A Macro-enabled Excel workbook (xlsm) that converts spreadsheets to seSue data files is provided in the Downloads section.</p>
+                    <p>Method of Successive Averages (MSA) algorithm implemented in seSue can be used to find the equilibrium flows of all provided SUE models in order to allow fair comparison of convergence performances.</p>
+                    <p>seSue allows visualization of congestion in road networks by color-coding the links with respect to the amount of traffic, travel costs or traffic density of the links.</p>
+                    <p>Finally, a Sensitivity Analysis module is available. In particular, it allows to carry out sensitivity analysis with respect to perturbations in the OD demands and link cost functions.</p>
+                </div>
+            </div>
+            
+            
+            <div>
+                <div id="sesueCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#sesueCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#sesueCarousel" data-slide-to="1"></li>
+                        <li data-target="#sesueCarousel" data-slide-to="2"></li>
+                        <li data-target="#sesueCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox" style="padding-left: 40px; padding-right: 40px;">
+                        <div class="item active"><img src="seSue1.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue2.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue3.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue4.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue5.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue6.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue7.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue8.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue9.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue10.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue11.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue12.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue13.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue14.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue15.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue16.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue17.png" style="display: block; margin: 0 auto;"></div>
+                        <div class="item"><img src="seSue18.png" style="display: block; margin: 0 auto;"></div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#sesueCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#sesueCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region secDownloads -->
+        <div id="secDownloads" class="container section">
+            <h3>Downloads</h3>
+            <div class="row" style="text-align:justify;">
+                <div class="col-md-6">
+                    <h4>Setup Files</h4>
+                    <p>Setup files of the latest version (v1) of seSue can be downloaded using the link below.</p>
+                    <a href="seSueSetup.zip" class="list-group-item">
+                        <h5 class="list-group-item-heading">Setup files <span class="glyphicon glyphicon-download-alt"></span></h5>
+                    </a>
+                    <h4 style="margin-top:20px;">Source Codes</h4>
+                    <p>Source codes of the latest version (v1) of seSue and of the included libraries can be downloaded using the link below.</p>
+                    <a href="seSueSourceCodes.zip" class="list-group-item">
+                        <h5 class="list-group-item-heading">Source codes (C#) <span class="glyphicon glyphicon-download-alt"></span></h5>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <h4>Data Files</h4>
+                    <p>Data files converted from the data files  published in <a href="http://fohs.bgu.ac.il/research/PersonalWebSite1main.aspx?id=dteVeejV">Professor Hilel Bar-Gera</a>'s website <a href="http://www.bgu.ac.il/~bargera/tntp/">http://www.bgu.ac.il/~bargera/tntp/</a> can be downloaded using the link below.</p>
+                    <a href="seSueDataFiles.zip" class="list-group-item">
+                        <h5 class="list-group-item-heading">Ready to use data files <span class="glyphicon glyphicon-download-alt"></span></h5>
+                    </a>
+                    <p style="margin-top:20px;">Marco-enabled Excel file to create custom network topologies can be downloaded using the link below:</p>
+                    <a href="SueFileGenerator.xlsm" class="list-group-item">
+                        <h5 class="list-group-item-heading">seSue data file generator <span class="glyphicon glyphicon-download-alt"></span></h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region secUserManual -->
+        <div id="secUserManual" class="container section">
+            <h3>User Manual</h3>
+
+            <div class="panel-group" id="accordionUserManual">
+                <!-- #region 1. Setup seSue -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading panelheadingbackground"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionUserManual" href="#step1">1. Setup seSue</a></h4></div>
+                    <div id="step1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>Download the setup files <a href="seSueSetup.zip">seSueSetup.zip<span class="glyphicon glyphicon-download-alt"></span></a>.</p>
+                            <p>Unzip the folder, double click <b>setup.exe</b> file, and follow the instructions of the setup wizard.</p>
+                            <img src="UG_1_1.png" style="border: solid 2px black;" class="img-responsive img-responsive img-rounded" alt="seSue setup file">
+                            <br /><br />
+                            <p>A desktop shortcut should be created in the Desktop. Use this shortcut or search <b>seSue</b> in programs to run seSue.</p>
+                            <img src="UG_1_2.png" class="img-responsive" alt="seSue setup file">
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region 2. Creating a Custom seSue File -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading panelheadingbackground"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionUserManual" href="#step2">2. Create a custom seSue file</a></h4></div>
+                    <div id="step2" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <div class="row" style="text-align:justify;">
+                                <div class="col-md-4"><img src="UG_2_1.png" style="width:100%;" class="img-responsive img-rounded" alt="Braess Network"></div>
+                                <div class="col-md-8">
+                                    <p style="text-align:justify;">In this part, the steps to create a custom seSue file using the macro-enabled Excel workbook are explained. The steps will be illustrated on Braess network displayed in the figure on the left which has a single OD pair <kbd>a-d</kbd>.</p>
+                                    <p style="text-align:justify;">
+                                        The minimal information that needs to be entered in the workbook to create a seSue file includes:
+                                        <ul>
+                                            <li>links and generalized link travel cost function parameters,</li>
+                                            <li>OD pairs and corresponding OD demands.</li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        In addition, the following information may be entered in the workbook:
+                                        <ul>
+                                            <li>paths, and</li>
+                                            <li>route choice models of the OD pairs.</li>
+                                        </ul>
+                                    </p>
+                                    <p>Alternatively, paths may be generated and / or route choice models may be entered later using the software.</p>
+                                </div>
+                            </div>
+
+                            <div class="panel-group" id="accordionCustomFile">
+                                <!-- #region 2.1. Links + OD Pairs (minimal) -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionCustomFile" href="#step2-1">2.1. Links + OD Pairs (minimal)</a></h4></div>
+                                    <div id="step2-1" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <div class="panel panel-default" id="step2-1-1">
+                                                <div class="panel-heading">2.1.1. Download seSue file generator</div>
+                                                <div class="panel-body">
+                                                    <p>Download the macro-enabled workbook <a href="SueFileGenerator.xlsm">SueFileGenerator.xlsm<span class="glyphicon glyphicon-download-alt"></span></a>.</p>
+                                                    <p>In order to use the data file generator, you need to enable the macros. If you need help in enabling macros, follow the instructions in the following <a href="https://support.office.com/en-nz/article/Enable-or-disable-macros-in-Office-documents-7b4fdd2e-174f-47e2-9611-9efe4f860b12">link</a>.</p>
+                                                    <p>It is not required for this tutorial, however you can check the instructions in the <b>UserGuide</b> worksheet of the file for details.</p>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default" id="step2-1-2">
+                                                <div class="panel-heading">2.1.2. Enter the links</div>
+                                                <div class="panel-body">
+                                                    <p>The sample network has 5 links: <kbd>a-b</kbd>, <kbd>a-c</kbd>, <kbd>b-c</kbd>, <kbd>b-d</kbd>, and <kbd>c-d</kbd>.</p>
+                                                    <p>Open the <b>Arcs</b> worksheet and enter the links and corresponding link travel cost coefficients as follows.</p>
+                                                    <img src="UG_2_1_2.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="Braess Network">
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default" id="step2-1-3">
+                                                <div class="panel-heading">2.1.3. Enter OD pairs</div>
+                                                <div class="panel-body">
+                                                    <p>The sample network has a single OD pair, <kbd>a-d</kbd> with a demand of 6 users.</p>
+                                                    <p>Open the <b>ODs</b> worksheet and enter the OD pair information as follows.</p>
+                                                    <img src="UG_2_1_3.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="Braess Network">
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default" id="step2-1-4">
+                                                <div class="panel-heading">2.1.4. Perform the checks and create the seSue file.</div>
+                                                <div class="panel-body">
+                                                    <p>
+                                                        seSue data file with minimal information is ready to be created. Perform the validation checks and create the seSue data file with the following steps:
+                                                        <ul>
+                                                            <li>Click <b>FIRST CHECK</b> button in the <b>Paths</b> worksheet.</li>
+                                                            <li>Click <b>SECOND CHECK</b> button in the <b>PathMDs</b> worksheet.</li>
+                                                            <li>Click <b>CREATE SUE FILE</b> button in the <b>PathMDs</b> worksheet. Save the SUE file as <b>Braess.sue</b>.</li>
+                                                        </ul>
+                                                    </p>
+                                                    <p>
+                                                        Open the created SUE file by
+                                                        <ul>
+                                                            <li>double clicking on the created file, or</li>
+                                                            <li>clicking <b>File > Open</b> and browsing the created file on seSue.</li>
+                                                        </ul>
+                                                        Browse Graph, Nodes, Links (Cost View and SUE View), OD Pairs and Paths tabs to check the information about the network.
+                                                    </p>
+                                                    <img src="UG_2_1_4.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step2-1-4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 2.2. Links + OD Pairs + Paths -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionCustomFile" href="#step2-2">2.2. Links + OD Pairs + Paths</a></h4></div>
+                                    <div id="step2-2" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>The sample network has a single OD pair with three possible routes: <kbd>a-b-d</kbd>, <kbd>a-b-c-d</kbd>, and <kbd>a-c-d</kbd>.</p>
+                                            <p>In real-sized traffic networks, there may exist a huge (or ininite) number of routes. A subset of 'efficient' routes may be generated using the algorithms provided in seSue.</p>
+                                            <p>In this part, the method of providing the route choice set externally to seSue is illustrated.</p>
+                                            <p>Follow the steps <a href="#step2-1-1">2.1.1.</a>, <a href="#step2-1-2">2.1.2.</a>, and <a href="#step2-1-3">2.1.3.</a> to enter the links and OD pairs of the network.</p>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" id="step2-2-1">2.2.1. Enter paths</div>
+                                                <div class="panel-body">
+                                                    <p>You may enter any subset of the routes that you want to include in the route choice set. In this example, three of the routes will be entered in the <b>Paths</b> workseet as follows.</p>
+                                                    <img src="UG_2_2_1.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step2-1-1">
+                                                </div>
+                                            </div>
+                                            <p>Follow the step <a href="#step2-1-4">2.1.4.</a> to create the seSue file with the routes.</p>
+                                            <img src="UG_2_2_1_b.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step2-1-1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 2.3. Links + OD Pairs + Choice Models -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionCustomFile" href="#step2-3">2.3. Links + OD Pairs + Choice Models</a></h4></div>
+                                    <div id="step2-3" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Route choice models of OD pairs can be assigned using the wizards of seSue.</p>
+                                            <p>Alternatively, they may be assigned during data file generation step as will be described in this section. Suppose that we would like to set the route choice model of OD pair <kbd>a-d</kbd> as the multinomial logit (MNL) model with a dispersion parameter of 0.1.</p>
+                                            <p>Follow the steps <a href="#step2-1-1">2.1.1.</a>, <a href="#step2-1-2">2.1.2.</a>, and <a href="#step2-1-3">2.1.3.</a> to enter the links and OD pairs of the network.</p>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" id="step2-3-1">2.3.1. Enter choice model information</div>
+                                                <div class="panel-body">
+                                                    <p>Add the choice model information in the <b>ODs</b> worksheet as follows.</p>
+                                                    <img src="UG_2_3_1.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step2-3">
+                                                </div>
+                                            </div>
+                                            <p>Follow the step <a href="#step2-1-4">2.1.4.</a> to create the seSue file with the assigned choice model.</p>
+                                            <img src="UG_2_3_1_b.png" style="border: solid 2px black;" class="img-responsive img-rounded" alt="step2-3-1-b">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 2.4. Links + OD Pairs + Paths + Choice Models -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionCustomFile" href="#step2-4">2.4. Links + OD Pairs + Paths + Choice Models</a></h4></div>
+                                    <div id="step2-4" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>In this section, we generate a seSue file with both a working route choice set and assigned choice models.</p>
+                                            <p>Alternatively, they may be assigned during data file generation step as will be described in this section. Suppose that we would like to set the route choice model of OD pair <kbd>a-d</kbd> as the multinomial logit (MNL) model with a dispersion parameter of 0.1.</p>
+                                            <p>Follow the steps <a href="#step2-1-1">2.1.1.</a>, <a href="#step2-1-2">2.1.2.</a>, and <a href="#step2-1-3">2.1.3.</a> to enter the links and OD pairs of the network.</p>
+                                            <p>Follow the step <a href="#step2-2-1">2.2.1.</a> to enter the paths.</p>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" id="step2-4-1">2.4.1. Enter choice model information</div>
+                                                <div class="panel-body">
+                                                    <p>Add the following information in the <b>ODs</b> worksheet as follows to set the choice model as the path-size logit (PSL) model with dispersion parameter 0.1.</p>
+                                                    <img src="UG_2_4_1.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step2-4-1">
+                                                </div>
+                                            </div>
+                                            <p>Follow the step <a href="#step2-1-4">2.1.4.</a> to create the seSue file with the routes and assigned choice model. Notice that path-sizes are included as the deterministic correction terms.</p>
+                                            <img src="UG_2_4_1_b.png" style="border: solid 2px black;" class="img-responsive img-rounded" alt="step2-3-1-b">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region 3. File operations -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading panelheadingbackground"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionUserManual" href="#step3">3. File operations</a></h4></div>
+                    <div id="step3" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <p>Model files of seSue use extension <b>.sue</b>. Therefore, files generated with SueFileGenerator.xlsm and created by seSue automatically have this extension.</p>
+                            <p>When the software is set up in your computer, the extension <b>.sue</b> is associated with seSue.</p>
+                            <!-- #region 3.1. Opening a seSue file -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" id="step3-1">3.1. Opening a seSue file</div>
+                                <div class="panel-body">
+                                    <p>Download the file <a href="SiouxFalls.zip">SiouxFalls.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, and unzip to extract the seSue file.</p>
+                                    <p>You can simply open the file with seSue by double clicking the file <b>SiouxFalls.sue</b> in the file explorer window.</p>
+                                    <p>Alternatively, you can run seSue by using the shortcut created on the desktop or searching it in the programs; and then click <b>File > Open</b>, or <kbd>Ctrl + O</kbd>, to browse and open the file.</p>
+                                    <p>
+                                        It is important to note that opened sue files are read into memory and they are not locked.
+                                        <ul>
+                                            <li>You can open an already open sue file. The file will be opened as another instance of seSue. Therefore, you may carry out different operations on the same sue file.</li>
+                                            <li>seSue does not automatically save the changes made on the file. Therefore, if the program is closed without saving, the changes will be lost.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- #endregion -->
+                            <p>In order to save the changes made in a sue file, you may click <b>File > Save</b>, or press <kbd>Ctrl + S</kbd>. This will overwrite the existing file.</p>
+                            <p>In order to save the file with a different name use <b>File > Save As</b>, or <kbd>Ctrl + Alt + S</kbd>.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region 4. Path Generation -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading panelheadingbackground"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionUserManual" href="#step4">4. Path generation</a></h4></div>
+                    <div id="step4" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <p>In this section, path generation algorithms implemented in seSue to generate route choice sets are be explained.</p>
+                            <p>
+                                Available algorithms in the current version are as follows:
+                                <ul>
+                                    <li>Yen's algorithm,</li>
+                                    <li>Dial's algorithm,</li>
+                                    <li>Link penalty algorithm, and</li>
+                                    <li>Link elimination algorithm.</li>
+                                </ul>
+                            </p>
+                            <div class="panel-group" id="accordionPathGeneration">
+                                <!-- #region 4.1. Yen's Algorithm -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionPathGeneration" href="#step4-1">4.1. Yen's Algorithm</a></h4></div>
+                                    <div id="step4-1" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Download <a href="SiouxFalls.zip">SiouxFalls.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFalls.sue file which includes 528 OD pairs and no paths yet (<a href="#step3-1">Step 3.1</a>).</p>
+                                            <p>Click <b>Path Generation > Yen's Algorithm</b> to open the algorithm's form.</p>
+                                            <img src="UG_4_1.png" style="border: solid 2px black;" class="img-responsive img-rounded" alt="step4-1">
+                                            <br /><br />
+                                            <p>
+                                                The form has three inputs:
+                                                <ul>
+                                                    <li>Select the shortest path algorithm that will be used at each iteration of Yen's algorithm in the dropdown list.</li>
+                                                    <li>If you check <i>'Keep existing paths (or clear)'</i>, paths already existing in the network will be kept and new paths generated by the algorithm will be appended. Otherwise, all existing paths will be deleted a priori to running the algorithm.</li>
+                                                    <li>Type an integer upper bound on the number of routes that will be generated for an OD pair in the text box with label <i>'Maximum nb of paths per OD pair'</i>. When the algorithm generates the specified number of paths for an OD pair, it stops and continues with the next OD pair. Note that the algorithm may not be able to reach the specified limit depending on the network topology. You can enter a very large integer in order to guarantee that the algorithm generates as much routes as it can.</li>
+                                                </ul>
+                                            </p>
+                                            <p>Once the inputs are provided, click <b>RUN</b> button to run the algorithm. You will be prompted the running time of the algorithm as soon as the search is complete. Then close the algorithm's form with the <kbd>x</kbd> button, and go to <b>Paths</b> tab to check the generated routes. Also check the <b>Graph</b> tab to observe the statistics related with routes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 4.2. Dial's Algorithm -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionPathGeneration" href="#step4-2">4.2. Dial's Algorithm</a></h4></div>
+                                    <div id="step4-2" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Download <a href="SiouxFalls.zip">SiouxFalls.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFalls.sue file which includes 528 OD pairs and no paths yet (<a href="#step3-1">Step 3.1</a>).</p>
+                                            <p>Click <b>Path Generation > Dial's Algorithm</b> to open the algorithm's form.</p>
+                                            <img src="UG_4_2.png" style="border: solid 2px black;" class="img-responsive img-rounded" alt="step4-1">
+                                            <br /><br />
+                                            <p>
+                                                The form has five inputs:
+                                                <ul>
+                                                    <li>
+                                                        Select <b>Double Criteria</b>, <b>Single Criterion</b>, or <b>No Criteria</b> in the dropdown list.
+                                                        <ul>
+                                                            <li>If <b>Double Criteria</b> is selected, all the arcs of the generated routes take the traveler away from the origin and close to the destination.</li>
+                                                            <li>If <b>Single Criterion</b> is selected, all the arcs of the generated routes take the traveler away from the origin.</li>
+                                                            <li>The last option <b>No Criteria</b> allows all routes, and hence, corresponds to acyclic path enumeration.</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Select the all-pairs shortest path algorithm that will be used once at the initialization step of Dial's algorithm in the second dropdown list.</li>
+                                                    <li>Since <b>No Criteria</b> option enumerates all paths, you may enter a reasonable limit on the number of arcs allowed in a path to maintain tractability of the algorithm in the <i>'Maximum number of arcs per path'</i> textbox.</li>
+                                                    <li>If you check <i>'Keep existing paths (or clear)'</i>, paths already existing in the network will be kept and new paths generated by the algorithm will be appended. Otherwise, all existing paths will be deleted a priori to running the algorithm.</li>
+                                                    <li>Type an integer upper bound on the number of routes that will be generated for an OD pair in the text box with label <i>'Maximum nb of paths per OD pair'</i>. When the algorithm generates the specified number of paths for an OD pair, it stops and continues with the next OD pair. Note that the algorithm may not be able to reach the specified limit depending on the network topology. You can enter a very large integer in order to guarantee that the algorithm generates as much routes as it can.</li>
+                                                </ul>
+                                            </p>
+                                            <p>Once the inputs are provided, click <b>RUN</b> button to run the algorithm. You will be prompted the running time of the algorithm as soon as the search is complete. Then close the algorithm's form with the <kbd>x</kbd> button, and go to <b>Paths</b> tab to check the generated routes. Also check the <b>Graph</b> tab to observe the statistics related with routes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 4.3. Link Penalty Algorithm -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionPathGeneration" href="#step4-3">4.3. Link Penalty Algorithm</a></h4></div>
+                                    <div id="step4-3" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Download <a href="SiouxFalls.zip">SiouxFalls.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFalls.sue file which includes 528 OD pairs and no paths yet (<a href="#step3-1">Step 3.1</a>).</p>
+                                            <p>Click <b>Path Generation > Link Penalty</b> to open the algorithm's form.</p>
+                                            <img src="UG_4_3.png" style="border: solid 2px black;" class="img-responsive img-rounded" alt="step4-3">
+                                            <br /><br />
+                                            <p>
+                                                The form has five inputs:
+                                                <ul>
+                                                    <li>Select the shortest path algorithm that will be used at each iteration of Link Penalty algorithm in the dropdown list.</li>
+                                                    <li>Type the factor with which the arcs in the shortest path will be penalized in the first textbox with label <i>'Penalty'</i>.</li>
+                                                    <li>Type a bound on the <i>Maximum number of iterations per OD pair</i> as a secondary stopping condition (together with the maximum number of paths per OD pair). This is, hence, the maximum number of shortest path algorithms that will be executed per OD pair.</li>
+                                                    <li>If you check <i>'Keep existing paths (or clear)'</i>, paths already existing in the network will be kept and new paths generated by the algorithm will be appended. Otherwise, all existing paths will be deleted a priori to running the algorithm.</li>
+                                                    <li>Type an integer upper bound on the number of routes that will be generated for an OD pair in the text box with label <i>'Maximum nb of paths per OD pair'</i>. When the algorithm generates the specified number of paths for an OD pair, it stops and continues with the next OD pair. Note that the algorithm may not be able to reach the specified limit depending on the network topology. You can enter a very large integer in order to guarantee that the algorithm generates as much routes as it can.</li>
+                                                </ul>
+                                            </p>
+                                            <p>Once the inputs are provided, click <b>RUN</b> button to run the algorithm. You will be prompted the running time of the algorithm as soon as the search is complete. Then close the algorithm's form with the <kbd>x</kbd> button, and go to <b>Paths</b> tab to check the generated routes. Also check the <b>Graph</b> tab to observe the statistics related with routes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 4.4. Link Elimination Algorithm -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionPathGeneration" href="#step4-4">4.4. Link Elimination Algorithm</a></h4></div>
+                                    <div id="step4-4" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Download <a href="SiouxFalls.zip">SiouxFalls.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFalls.sue file which includes 528 OD pairs and no paths yet (<a href="#step3-1">Step 3.1</a>).</p>
+                                            <p>Click <b>Path Generation > Link Elimination</b> to open the algorithm's form.</p>
+                                            <img src="UG_4_4.png" style="border: solid 2px black;" class="img-responsive img-rounded" alt="step4-4">
+                                            <br /><br />
+                                            <p>
+                                                The form has three inputs:
+                                                <ul>
+                                                    <li>Select the shortest path algorithm that will be used at each iteration of Link Elimination algorithm in the dropdown list.</li>
+                                                    <li>If you check <i>'Keep existing paths (or clear)'</i>, paths already existing in the network will be kept and new paths generated by the algorithm will be appended. Otherwise, all existing paths will be deleted a priori to running the algorithm.</li>
+                                                    <li>Type an integer upper bound on the number of routes that will be generated for an OD pair in the text box with label <i>'Maximum nb of paths per OD pair'</i>. When the algorithm generates the specified number of paths for an OD pair, it stops and continues with the next OD pair. Note that the algorithm may not be able to reach the specified limit depending on the network topology. You can enter a very large integer in order to guarantee that the algorithm generates as much routes as it can.</li>
+                                                </ul>
+                                            </p>
+                                            <p>Once the inputs are provided, click <b>RUN</b> button to run the algorithm. You will be prompted the running time of the algorithm as soon as the search is complete. Then close the algorithm's form with the <kbd>x</kbd> button, and go to <b>Paths</b> tab to check the generated routes. Also check the <b>Graph</b> tab to observe the statistics related with routes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 4.5. Link Penalty Algorithm followed by Link Elimination Algorithm -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionPathGeneration" href="#step4-5">4.5. Link Penalty Algorithm followed by Link Elimination Algorithm</a></h4></div>
+                                    <div id="step4-5" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Download <a href="SiouxFalls.zip">SiouxFalls.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFalls.sue file which includes 528 OD pairs and no paths yet (<a href="#step3-1">Step 3.1</a>).</p>
+                                            <p>Click <b>Path Generation > Link Penalty > Link Elimination</b> to open the algorithm's form.</p>
+                                            <p>This procedure sequentially runs Link Penalty and Link Elimination algorithms. Routes generated with Link Penalty algorithm are kept, and new routes found by the Link Elimination algorithm are appended to the route choice set.</p>
+                                            <img src="UG_4_5.png" style="border: solid 2px black;" class="img-responsive img-rounded" alt="step4-5">
+                                            <br /><br />
+                                            <p>
+                                                The form has six inputs:
+                                                <ul>
+                                                    <li>Select the shortest path algorithm that will be used at each iteration of Link Penalty and Link Elimination algorithms in the dropdown list.</li>
+                                                    <li>(Link Penalty algorithm) Type the factor with which the arcs in the shortest path will be penalized in the first textbox with label <i>'Penalty'</i>.</li>
+                                                    <li>(Link Penalty algorithm) Type a bound on the <i>Maximum number of iterations per OD pair</i> as a secondary stopping condition (together with the maximum number of paths per OD pair). This is, hence, the maximum number of shortest path algorithms that will be executed per OD pair.</li>
+                                                    <li>Type the <i>'limit on the fraction of the paths that will be generated by Link Penalty algorithm'</i>. For instance, if maximum number of paths per OD pair is set as 10 and the fraction is set as 0.4; the procedure will search at most 4 routes per OD pair with the Link Penalty algorithm, and will try to reach 10 routes with the Link Elimination algorithm.</li>
+                                                    <li>If you check <i>'Keep existing paths (or clear)'</i>, paths already existing in the network will be kept and new paths generated by the algorithm will be appended. Otherwise, all existing paths will be deleted a priori to running the algorithm.</li>
+                                                    <li>Type an integer upper bound on the number of routes that will be generated for an OD pair in the text box with label <i>'Maximum nb of paths per OD pair'</i>. When the algorithm generates the specified number of paths for an OD pair, it stops and continues with the next OD pair. Note that the algorithm may not be able to reach the specified limit depending on the network topology. You can enter a very large integer in order to guarantee that the algorithm generates as much routes as it can.</li>
+                                                </ul>
+                                            </p>
+                                            <p>Once the inputs are provided, click <b>RUN</b> button to run the algorithm. You will be prompted the running time of the algorithm as soon as the search is complete. Then close the algorithm's form with the <kbd>x</kbd> button, and go to <b>Paths</b> tab to check the generated routes. Also check the <b>Graph</b> tab to observe the statistics related with routes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 4.6. Link Elimination Algorithm followed by Link Penalty Algorithm -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionPathGeneration" href="#step4-6">4.6. Link Elimination Algorithm followed by Link Penalty Algorithm</a></h4></div>
+                                    <div id="step4-6" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Click <b>Path Generation > Link Elimination > Link Penalty</b> to open the algorithm's form.</p>
+                                            <p>This procedure sequentially runs Link Elimination and Link Penalty algorithms. Routes generated with Link Elimination algorithm are kept, and new routes found by the Link Penalty algorithm are appended to the route choice set.</p>
+                                            <p>The instructions are the same with <a href="#step4-5">Link Penalty Algorithm followed by Link Elimination Algorithm</a> except for the running order of the algorithms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 4.7. Custom Combinations -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionPathGeneration" href="#step4-7">4.7. Custom Combinations</a></h4></div>
+                                    <div id="step4-7" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>The two procedures <a href="#step4-5">Link Penalty Algorithm followed by Link Elimination Algorithm</a> and <a href="#step4-6">Link Elimination Algorithm followed by Link Penalty Algorithm</a> are two combinations of the path generation algorithms.</p>
+                                            <p>Procedures with other combinations may be carried out with seSue as well by using the:</p>
+                                            <ul>
+                                                <li>the <i>'keep existing paths option'</i>, and</li>
+                                                <li>the stopping condition on the <i>'maximum number of paths per OD pair'</i>,</li>
+                                            </ul>
+                                            <p>and running the desired algorithms sequentially.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region 5. Choice model wizard -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading panelheadingbackground"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionUserManual" href="#step5">5. Choice model wizard</a></h4></div>
+                    <div id="step5" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <p>In this section, route choice model assignment to the OD pairs by Choice Model Wizards is explained.</p>
+                            <p>
+                                Available discrete choice models in the current version are as follows:
+                                <ul>
+                                    <li>Logit-based models,</li>
+                                    <li>Weibit-based models, and</li>
+                                    <li>Marginal distribution model (MDM) variants.</li>
+                                </ul>
+                            </p>
+                            <p>It is important to note that the route choice sets need to be generated a priori to choice model assignment.</p>
+                            <div class="panel-group" id="accordionChoiceModel">
+                                <!-- #region 5.0. Deterministic -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionChoiceModel" href="#step5-0">5.0. Deterministic (User Equilibrium)</a></h4></div>
+                                    <div id="step5-0" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Download <a href="SiouxFallsWithPaths.zip">SiouxFallsWithPaths.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFallsWithPaths.sue file which includes 528 OD pairs and 5280 paths generated with Link Penalty algorithm.</p>
+                                            <p>Click <b>Choice Model Wizard > Deterministic</b>. The wizard has a single step.</p>
+
+                                            <div class="panel panel-default" id="step5-0-1">
+                                                <div class="panel-heading">5.0.1. Apply To</div>
+                                                <div class="panel-body">
+                                                    <p>All OD pairs in the network are listed in the 'Apply To' tab. Check the OD pairs to which you want to assign a choice model.</p>
+                                                    <p>The OD pairs with no assigned choice models will be automatically selected.</p>
+                                                    <p>You can double-click on the data table to check / uncheck all OD pairs.</p>
+                                                    <p>In order to proceed at least one OD pair needs to be selected.</p>
+                                                    <p>After selecting the desired OD pairs, click <b>Finish</b>.</p>
+                                                </div>
+                                            </div>
+                                            <p>Once you have finished the steps of the choice model wizard, open the 'OD Pairs' tab to check the choice model assignment.</p>
+                                            <p>The key word <i>Det(max)</i> corresponds to utility maximization with a deterministic utility function.</p>
+                                            <p>Resulting model is the user equilibrium (UE) model, the solution of which satisfies Wardrop's (1952) principles.</p>
+                                            <img src="UG_5_0_1.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step5-1-5">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- #region 5.1. Logit -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionChoiceModel" href="#step5-1">5.1. Logit</a></h4></div>
+                                    <div id="step5-1" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Download <a href="SiouxFallsWithPaths.zip">SiouxFallsWithPaths.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFallsWithPaths.sue file which includes 528 OD pairs and 5280 paths generated with Link Penalty algorithm.</p>
+                                            <p>Click <b>Choice Model Wizard > Logit</b>. The wizard has four steps.</p>
+
+                                            <div class="panel panel-default" id="step5-1-1">
+                                                <div class="panel-heading">5.1.1. Apply To</div>
+                                                <div class="panel-body">
+                                                    <p>All OD pairs in the network are listed in the 'Apply To' tab. Check the OD pairs to which you want to assign a choice model.</p>
+                                                    <p>The OD pairs with no assigned choice models will be automatically selected.</p>
+                                                    <p>You can double-click on the data table to check / uncheck all OD pairs.</p>
+                                                    <p>In order to proceed at least one OD pair needs to be selected.</p>
+                                                    <p>After selecting the desired OD pairs, click <b>Next</b>.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-1-2">
+                                                <div class="panel-heading">5.1.2. Settings</div>
+                                                <div class="panel-body">
+                                                    <p>This is the main step that defines the settings of the choice model.</p>
+                                                    <p>
+                                                        The two dropdown lists at the top of the form correspond to:
+                                                        <ul>
+                                                            <li>
+                                                                dispersion parameter setting
+                                                                <ul>
+                                                                    <li><b>None:</b> a dispersion parameter of theta will be assigned to all OD pairs.</li>
+                                                                    <li><b>OD-level scaling using Scaling Factor:</b> dispersion parameters will be scaled in the OD level with respect to the scaling factor.</li>
+                                                                    <li><b>OD-level scaling using Coefficient of Variation:</b> dispersion parameters will be scaled in the OD level with respect to a constant coefficient of variation (nu).</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                deterministic correction term setting
+                                                                <ul>
+                                                                    <li><b>None (1):</b> route-specific deterministic correction terms will be set to 1.</li>
+                                                                    <li><b>Using Commonality Factor:</b> route-specific deterministic correction terms will be set with respect to the commonality factor.</li>
+                                                                    <li><b>Using Path Size:</b> route-specific deterministic correction terms will be set to the path sizes.</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </p>
+                                                    <p>As you change the settings, check the formulations below to understand the corresponding models and route choice probability expressions.</p>
+                                                    <p>The parameters that will be used in the assignment can be entered in the Parameters data table.</p>
+                                                    <img src="UG_5_1_2.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step5-1-2">
+                                                    <p>After selecting the desired settings and entering the values of the parameters, click <b>Next</b>.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-1-3">
+                                                <div class="panel-heading">5.1.3. Dispersion</div>
+                                                <div class="panel-body">
+                                                    <p>The data table in this step displays the assigned dispersion parameters (theta) according to the selected dispersion parameter setting in the previous step for the OD pairs that are selected in 'Apply To' tab.</p>
+                                                    <p>If these are the desired dispersion parameters, click <b>Next</b> to proceed.</p>
+                                                    <p>You can also customize the model by manually changing the dispersion parameters of the desired OD pairs.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-1-4">
+                                                <div class="panel-heading">5.1.4. Correction</div>
+                                                <div class="panel-body">
+                                                    <p>The data table in this step displays the assigned correction terms according to the selected deterministic correction parameter setting in the 'Settings' tab for the OD pairs that are selected in 'Apply To' tab.</p>
+                                                    <p>If these are the desired correction terms, click <b>Finish</b> to complete the choice model assignment.</p>
+                                                    <p>You can also manually update the deterministic correction terms in the 'CT' column.</p>
+                                                </div>
+                                            </div>
+
+                                            <p>Once you have finished the steps of the choice model wizard, open the 'OD Pairs' tab to check the choice model assignment.</p>
+                                            <img src="UG_5_1_5.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step5-1-5">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 5.2. Weibit -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionChoiceModel" href="#step5-2">5.2. Weibit</a></h4></div>
+                                    <div id="step5-2" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>Download <a href="SiouxFallsWithPaths.zip">SiouxFallsWithPaths.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFallsWithPaths.sue file which includes 528 OD pairs and 5280 paths generated with Link Penalty algorithm.</p>
+                                            <p>Click <b>Choice Model Wizard > Weibit</b>. The wizard has four steps.</p>
+
+                                            <div class="panel panel-default" id="step5-2-1">
+                                                <div class="panel-heading">5.2.1. Apply To</div>
+                                                <div class="panel-body">
+                                                    <p>All OD pairs in the network are listed in the 'Apply To' tab. Check the OD pairs to which you want to assign a choice model.</p>
+                                                    <p>The OD pairs with no assigned choice models will be automatically selected.</p>
+                                                    <p>You can double-click on the data table to check / uncheck all OD pairs.</p>
+                                                    <p>In order to proceed at least one OD pair needs to be selected.</p>
+                                                    <p>After selecting the desired OD pairs, click <b>Next</b>.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-2-2">
+                                                <div class="panel-heading">5.2.2. Settings</div>
+                                                <div class="panel-body">
+                                                    <p>This is the main step that defines the settings of the choice model.</p>
+                                                    <p>
+                                                        The dropdown list at the top of the form correspond to the deterministic correction term setting:
+                                                        <ul>
+                                                            <li><b>None (1):</b> route-specific deterministic correction terms will be set to 1.</li>
+                                                            <li><b>Using Path Size:</b> route-specific deterministic correction terms will be set to the path sizes.</li>
+                                                        </ul>
+                                                    </p>
+                                                    <p>As you change the settings, check the formulations below to understand the corresponding models and route choice probability expressions.</p>
+                                                    <p>The parameters that will be used in the assignment can be entered in the Parameters data table.</p>
+                                                    <img src="UG_5_1_2.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step5-1-2">
+                                                    <p>After selecting the desired settings and entering the values of the parameters, click <b>Next</b>.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-2-3">
+                                                <div class="panel-heading">5.2.3. Weibull Parameters</div>
+                                                <div class="panel-body">
+                                                    <p>The data table in this step displays the assigned shape (beta) and location (xi) parameters of the underlying Weibull distribution of the weibit model according to the entered parameters in the previous step for the OD pairs that are selected in 'Apply To' tab.</p>
+                                                    <p>If these are the desired dispersion parameters, click <b>Next</b> to proceed.</p>
+                                                    <p>You can also customize the model by manually changing the shape and location parameters of the desired OD pairs.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-2-4">
+                                                <div class="panel-heading">5.2.4. Correction</div>
+                                                <div class="panel-body">
+                                                    <p>The data table in this step displays the assigned correction terms according to the selected deterministic correction parameter setting in the 'Settings' tab for the OD pairs that are selected in 'Apply To' tab.</p>
+                                                    <p>If these are the desired correction terms, click <b>Finish</b> to complete the choice model assignment.</p>
+                                                    <p>You can also manually update the deterministic correction terms in the 'CT' column.</p>
+                                                </div>
+                                            </div>
+
+                                            <p>Once you have finished the steps of the choice model wizard, open the 'OD Pairs' tab to check the choice model assignment.</p>
+                                            <img src="UG_5_2_5.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step5-2-5">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 5.3. MDM with Exponential MDs -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionChoiceModel" href="#step5-3">5.3. MDM with Exponential MDs</a></h4></div>
+                                    <div id="step5-3" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>This wizard helps assign Marginal Distribution Model with exponential marginal distributions as the route choice model.</p>
+                                            <p>Download <a href="SiouxFallsWithPaths.zip">SiouxFallsWithPaths.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFallsWithPaths.sue file which includes 528 OD pairs and 5280 paths generated with Link Penalty algorithm.</p>
+                                            <p>Click <b>Choice Model Wizard > MDM with Exponential MDs</b>. The wizard has three steps.</p>
+
+                                            <div class="panel panel-default" id="step5-3-1">
+                                                <div class="panel-heading">5.3.1. Apply To</div>
+                                                <div class="panel-body">
+                                                    <p>All OD pairs in the network are listed in the 'Apply To' tab. Check the OD pairs to which you want to assign a choice model.</p>
+                                                    <p>The OD pairs with no assigned choice models will be automatically selected.</p>
+                                                    <p>You can double-click on the data table to check / uncheck all OD pairs.</p>
+                                                    <p>In order to proceed at least one OD pair needs to be selected.</p>
+                                                    <p>After selecting the desired OD pairs, click <b>Next</b>.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-3-2">
+                                                <div class="panel-heading">5.3.2. Settings</div>
+                                                <div class="panel-body">
+                                                    <p>This is the main step that defines the settings of the choice model.</p>
+                                                    <p>
+                                                        The two dropdown lists at the top of the form correspond to:
+                                                        <ul>
+                                                            <li>
+                                                                rate parameter setting of the exponential marginal distributions
+                                                                <ul>
+                                                                    <li><b>None:</b> a rate parameter equal to the reciprocal of theta will be assigned to all routes.</li>
+                                                                    <li><b>OD-level scaling using Scaling Factor:</b> rate parameters will be scaled in the OD level with respect to the scaling factor.</li>
+                                                                    <li><b>OD-level scaling using Coefficient of Variation:</b> rate parameters will be scaled in the OD level with respect to a constant coefficient of variation (nu).</li>
+                                                                    <li><b>Path-level scaling using Scaling Factor:</b> rate parameters will be scaled in the route level with respect to the scaling factor.</li>
+                                                                    <li><b>Path-level scaling using Coefficient of Variation:</b> rate parameters will be scaled in the route level with respect to a constant coefficient of variation (nu).</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                location parameter setting of the exponential marginal distributions
+                                                                <ul>
+                                                                    <li><b>None (1):</b> route-specific location parameters will be set to 0.</li>
+                                                                    <li><b>Using Commonality Factor:</b> route-specific location parameters will be set to the negative of the commonality factor.</li>
+                                                                    <li><b>Using Path Size:</b> route-specific location parameters will be set to logarithm of the path-size scaled by the reciprocal of the rate parameter.</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </p>
+                                                    <p>As you change the settings, check the formulations below to understand the corresponding models and route choice probability expressions.</p>
+                                                    <p>The parameters that will be used in the assignment can be entered in the Parameters data table.</p>
+                                                    <img src="UG_5_3_2.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step5-3-2">
+                                                    <p>After selecting the desired settings and entering the values of the parameters, click <b>Next</b>.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-3-3">
+                                                <div class="panel-heading">5.3.3. Exponential Distribution Parameters</div>
+                                                <div class="panel-body">
+                                                    <p>The data table in this step displays the assigned route-specific rate and location parameters of the exponential marginal distributions according to the selected settings in the previous step.</p>
+                                                    <p>If these are the parameters, click <b>Finish</b> to complete the choice model assignment.</p>
+                                                    <p>You can also customize the model by manually changing the exponential distribution parameters of the desired routes.</p>
+                                                </div>
+                                            </div>
+
+                                            <p>Once you have finished the steps of the choice model wizard, open the 'OD Pairs' tab to check the choice model assignment.</p>
+                                            <img src="UG_5_3_5.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step5-3-5">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                                <!-- #region 5.4. MDM with Normal MDs -->
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading panelheadingbackground2"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionChoiceModel" href="#step5-4">5.4. MDM with Normal MDs</a></h4></div>
+                                    <div id="step5-4" class="panel-collapse collapse ">
+                                        <div class="panel-body panel-primary">
+                                            <p>This wizard helps assign Marginal Distribution Model with normal marginal distributions as the route choice model.</p>
+                                            <p>Download <a href="SiouxFallsWithPaths.zip">SiouxFallsWithPaths.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFallsWithPaths.sue file which includes 528 OD pairs and 5280 paths generated with Link Penalty algorithm.</p>
+                                            <p>Click <b>Choice Model Wizard > MDM with Normal MDs</b>. The wizard has three steps.</p>
+
+                                            <div class="panel panel-default" id="step5-4-1">
+                                                <div class="panel-heading">5.4.1. Apply To</div>
+                                                <div class="panel-body">
+                                                    <p>All OD pairs in the network are listed in the 'Apply To' tab. Check the OD pairs to which you want to assign a choice model.</p>
+                                                    <p>The OD pairs with no assigned choice models will be automatically selected.</p>
+                                                    <p>You can double-click on the data table to check / uncheck all OD pairs.</p>
+                                                    <p>In order to proceed at least one OD pair needs to be selected.</p>
+                                                    <p>After selecting the desired OD pairs, click <b>Next</b>.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-4-2">
+                                                <div class="panel-heading">5.4.2. Settings</div>
+                                                <div class="panel-body">
+                                                    <p>This is the main step that defines the settings of the choice model.</p>
+                                                    <p>
+                                                        The two dropdown lists at the top of the form correspond to:
+                                                        <ul>
+                                                            <li>
+                                                                standard deviation setting of the normal marginal distributions
+                                                                <ul>
+                                                                    <li><b>None:</b> a constant standard deviation will be assigned to all routes.</li>
+                                                                    <li><b>OD-level scaling using Scaling Factor:</b> standard deviations will be scaled in the OD level with respect to the scaling factor.</li>
+                                                                    <li><b>OD-level scaling using Coefficient of Variation:</b> standard deviations will be scaled in the OD level with respect to a constant coefficient of variation (nu).</li>
+                                                                    <li><b>Path-level scaling using Scaling Factor:</b> standard deviations will be scaled in the route level with respect to the scaling factor.</li>
+                                                                    <li><b>Path-level scaling using Coefficient of Variation:</b> standard deviations will be scaled in the route level with respect to a constant coefficient of variation (nu).</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                mean setting of the normal marginal distributions
+                                                                <ul>
+                                                                    <li><b>None (1):</b> all route-specific means will be set to 0.</li>
+                                                                    <li><b>Using Path Size:</b> route-specific means will be arranged by the path-size.</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </p>
+                                                    <p>As you change the settings, check the formulations below to understand the corresponding models and route choice probability expressions.</p>
+                                                    <p>The parameters that will be used in the assignment can be entered in the Parameters data table.</p>
+                                                    <img src="UG_5_4_2.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step5-4-2">
+                                                    <p>After selecting the desired settings and entering the values of the parameters, click <b>Next</b>.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default" id="step5-4-3">
+                                                <div class="panel-heading">5.4.3. Normal Distribution Parameters</div>
+                                                <div class="panel-body">
+                                                    <p>The data table in this step displays the assigned route-specific means and standard deviations of the normal marginal distributions according to the selected settings in the previous step.</p>
+                                                    <p>If these are the parameters, click <b>Finish</b> to complete the choice model assignment.</p>
+                                                    <p>You can also customize the model by manually changing the normal distribution parameters of the desired routes.</p>
+                                                </div>
+                                            </div>
+
+                                            <p>Once you have finished the steps of the choice model wizard, open the 'OD Pairs' tab to check the choice model assignment.</p>
+                                            <img src="UG_5_4_5.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step5-4-5">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- #endregion -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region 6. Finding SUE flows: method of successive averages (MSA) -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading panelheadingbackground"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionUserManual" href="#step6">6. Finding SUE flows: method of successive averages (MSA)</a></h4></div>
+                    <div id="step6" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <p>
+                                In order to find the SUE flows, the following should be satisfied:
+                                <ul>
+                                    <li>at least one route should be defined for each OD pair (see <a href="#step4">Step 4</a> for path generation), and</li>
+                                    <li>choice models of all OD pairs should be determined (see <a href="#step5">Step 5</a> for choice model assignment).</li>
+                                </ul>
+                            </p>
+                            <p>Once these two steps are completed, the SUE flows can be obtained by the same MSA algorithm that can be used with all implemented route choice models.</p>
+                            <p>Download <a href="SiouxFallsMSA.zip">SiouxFallsMSA.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFallsMSA.sue file.</p>
+
+                            <!-- #region 6.1. MSA algorithm settings -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" id="step6-1">6.1. MSA algorithm settings</div>
+                                <div class="panel-body">
+                                    <p>Open 'MSA' tab and click on the button on the left ('MSA (Standard(1,0),100,0.01)') to open the settings of the algorithm.</p>
+                                    <img src="UG_6_1.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step6-1">
+                                    <br /><br />
+                                    <p>
+                                        The implemented algorithm uses two stopping conditions:
+                                        <ul>
+                                            <li>the algorithm stops after 'Maximum number of MSA iterations', and</li>
+                                            <li>the algorithm stops whenever the root mean square error (RMSE) of two sequential link flow vectors drops below the 'RMSE threshold'.</li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        Four different step size settings are available in the current version of seSue which can be selected using the dropdown list:
+                                        <ul>
+                                            <li>standard step size,</li>
+                                            <li>step size proposed by Liu et al. (2009),</li>
+                                            <li>step size proposed by Nagurney and Zhang (1996), and</li>
+                                            <li>step size proposed by Polyak (1990).</li>
+                                        </ul>
+                                    </p>
+                                    <p>Check the formulations displayed on the right when you change the step size setting, where alpha(n) designates the step size at the nth iteration of the MSA algorithm.</p>
+                                </div>
+                            </div>
+                            <!-- #endregion -->
+                            <!-- #region 6.2. Running the MSA algorithm -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" id="step6-2">6.2. Running the MSA algorithm</div>
+                                <div class="panel-body">
+                                    <p>Click the <b>Run</b> button in the 'MSA' tab to run the algorithm.</p>
+                                    <p>You will be prompted the running time and number of iterations until the algorithm converged.</p>
+                                    <p>
+                                        The data table in the 'MSA' tab shows the following information at each iteration of the MSA algorithm:
+                                        <ul>
+                                            <li>RMSE: root mean square error between the current and previous link flow vectors,</li>
+                                            <li>Link Flow Array: comma separated values of the link flow values ordered in the order of the links in the 'Arcs' tab.</li>
+                                        </ul>
+                                    </p>
+                                    <p>The last row of this data table corresponds to the SUE flows.</p>
+                                    <img src="UG_6_2.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step6-2">
+                                </div>
+                            </div>
+                            <!-- #endregion -->
+                            <!-- #region 6.3. Checking route choice probabilities and SUE link flows -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" id="step6-2">6.3. Checking route choice probabilities and SUE link flows</div>
+                                <div class="panel-body">
+                                    <p>Once the SUE model is solved, SUE link flows and link travel costs can be observed in the 'SUE View' tab of the 'Links' tab.</p>
+                                    <img src="UG_6_3_a.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step6-3-a">
+                                    <br /><br />
+                                    <p>Route choice probabilities, SUE path flows and route travel costs can be observed in the 'Paths' tab.</p>
+                                    <img src="UG_6_3_b.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step6-3-b">
+                                </div>
+                            </div>
+                            <!-- #endregion -->
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region 7. Network visualization -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading panelheadingbackground"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionUserManual" href="#step7">7. Network visualization</a></h4></div>
+                    <div id="step7" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <p>Download <a href="SiouxFallsSolved.zip">SiouxFallsSolved.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFallsSolved.sue file.</p>
+                            <p>The sue file contains route choice sets, assigned choice models and the SUE solution.</p>
+                            <p>Click <b>Report > Network Visualization</b> to open the network visualization module.</p>
+                            <img src="UG_7_1.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step7-1">
+                            <br /><br />
+                            <p>The module has two settings:</p>
+                            <ul>
+                                <li>
+                                    Network: use the dropdown list on the top of the form to select the portion of the network that will be visualized:
+                                    <ul>
+                                        <li>Select <b>entire network</b> to create visualize the entire network.</li>
+                                        <li>Select <b>select origin-destination pairs</b> and then check the OD pairs that you want to include in the visualization. This option allows to focus on the desired OD pairs.</li>
+                                        <li>Select <b>select nodes</b> and then check the nodes you want to include in the visualization. All incoming and outgoing links associated with the selected nodes will be included. This option allows to focus on the desired zones of the network.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Link Color Coding:
+                                    <ul>
+                                        <li>
+                                            Use the dropdown list to select the metric for color-coding. The available metrics in the current version are as follows:
+                                            <ul>
+                                                <li>Flow: SUE link flow</li>
+                                                <li>Cost: SUE link travel cost</li>
+                                                <li>Flow / Capacity: SUE link density</li>
+                                            </ul>
+                                        </li>
+                                        <li>Click on the 'minimum' and 'maximum' values of the selected metric to deine the color scale.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>Once you have entered the desired settings, click <b>Generate</b> button to create the network visualization. The sample network below displays the network elements for OD pair <kbd>1-9</kbd>, where the least (most) congested links are colored by green (red).</p>
+                            <img src="UG_7_2.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step7-2">
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+                <!-- #region 8. Sensitivity analysis -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading panelheadingbackground"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordionUserManual" href="#step8">8. Sensitivity analysis</a></h4></div>
+                    <div id="step8" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <p>Sensitivity Analysis module allows to analyze the effects of the perturbations in:</p>
+                            <ul>
+                                <li>the OD demand of a single OD pair or of all OD pairs, and</li>
+                                <li>the free-flow-travel-time (FFTT) of a single link or of all links.</li>
+                            </ul>
+                            <p>on the equilibrium flows, costs, and choice probabilities.</p>
+                            <p>Download <a href="SiouxFallsSolved.zip">SiouxFallsSolved.zip<span class=" glyphicon glyphicon-download-alt"></span></a>, extract and open SiouxFallsSolved.sue file.</p>
+                            <p>The sue file contains route choice sets, assigned choice models and the SUE solution.</p>
+                            <p>Click <b>Sensitivity Analysis > Perturb OD Demand</b> to open the network visualization module.</p>
+                            <img src="UG_8_1.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step8-1"><br /><br />
+                            <p>The form includes three settings.</p>
+                            <ol>
+                                <li>
+                                    Perturbed Elements:
+                                    <ul>
+                                        <li>Select 'perturb all OD pairs' to change the demands of all OD pairs.</li>
+                                        <li>Select 'select OD pair to be perturbed' and select the desired OD pair in the dropdown list that appears below this option.</li>
+                                    </ul>
+                                </li>
+                                <li>MSA Settings: click the <b>MSA Settings</b> button to define the settings of the MSA algorithm that will be used during the Sensitivity Analysis (see <a href="#step6-1">Step 6.1.</a> for details).</li>
+                                <li>
+                                    Perturbation:
+                                    <ul>
+                                        <li>The demand of the selected OD pair(s) will be perturbed by epsilon.</li>
+                                        <li>
+                                            According to the selected option in the dropdown list, the demand(s) may be
+                                            <ul>
+                                                <li>increased by epsilon, or</li>
+                                                <li>multiplied by epsilon.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            The first value of epsilon (zero for incrementing and one for multiplying) is the basis which represents the current SUE model.
+                                            Four additional values of epsilon each corresponding to a different perturbation scenario may be added to the 'Epsilon' table.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <p>Click the <b>RUN</b> button when the settnigs are determined. For the settings in the example above, seSue will</p>
+                            <ul>
+                                <li>find SUE solution for the current SUE model, </li>
+                                <li>multpily the OD demands of all OD pairs by 0.5 and find the SUE solution, </li>
+                                <li>multpily the OD demands of all OD pairs by 2 and find the SUE solution.</li>
+                            </ul>
+                            <p>Note that original OD demands and MSA settings will be stored at the end of the MSA runs for the sensitivity analysis.</p>
+                            <p>Open 'Reports' tab to analyze the effects of OD demand perturbation.</p>
+                            <img src="UG_8_2.png" style="border: solid 2px black;" class=" img-responsive img-rounded" alt="step8-2"><br /><br />
+                            <p>Reports of the changes in the following metrics are available:</p>
+                            <ul>
+                                <li>link flows,</li>
+                                <li>link travel costs,</li>
+                                <li>path flows,</li>
+                                <li>path travel costs, and</li>
+                                <li>path choice probabilities.</li>
+                            </ul>
+                            <p>For all metrics, values of the selected metrics are presented in the columns with the values of epsilon as the header (columns 1, 0.5 and 2 in the above example), while the columns with headers starting with Delta display the percent deviations from the current SUE solution (column 1 in this example).</p>
+                            <br />
+                            <p>Steps to carry out sensitivity analysis for <b>Perturbations in link FFTT</b> are exactly the same with the steps described above.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- #endregion -->
+            </div>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region secContact -->
+        <div id="secContact" class="container section">
+            <h3>Contact Us</h3>
+            <p>This software is developed by</p>
+            <ul>
+				<li><a href="http://www.uurari.com">Uğur Arıkan</a>,</li>
+                <li><a href="http://people.sutd.edu.sg/~ahipasaoglu/">Selin Damla Ahipaşaoğlu</a>, and</li>
+                <li><a href="http://people.sutd.edu.sg/~natarajan_karthik/">Karthik Natarajan</a></li>
+            </ul>
+            <p>at the <a href="http://esd.sutd.edu.sg/">Engineering Systems and Design (ESD)</a> pillar in <a href="http://www.sutd.edu.sg/">Singapore University of Technology and Design (SUTD)</a>.</p>
+            <p>Address: 8 Somapah Road, Singapore 487372 (<a href="https://esd.sutd.edu.sg/resources/visitors/">view directions</a>).</p>
+            <p>We would love to have feedback on seTreq. Please send your comments, questions, etc. to <a href="mailto:ugur.arikan.ie@live.com">ugur.arikan.ie@live.com <span class="glyphicon glyphicon-envelope"></span></a>.</p>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region secReferences -->
+        <div id="secReferences" class="container section">
+            <h3>References</h3>
+            <p>
+                <ul class="list-group">
+                    <li class="list-group-item">S. D. Ahipaşaoğlu, U. Arıkan, and K. Natarajan. On the flexibility of using marginal distribution choice models in traffic equilibrium <i>Transportation Research Part B: Methodological,</i> 91:130-158, 2016.</li>
+                    <li class="list-group-item">J. Azevedo, M. Santos Costa, J. Silvestre Madera, and E. Vieira Martins. An algorithm for the ranking of shortest paths. <i>European Journal of Operational Research</i>, 69: 97-106, 1993.</li>
+                    <li class="list-group-item">M. Ben-Akiva and M. Bierlaire. Discrete choice methods and their applications to short term travel decisions. <i>Hall, R.W. (Ed.), Handbook of Transportation Science, Kluwer Publishers,</i>, pages 5-33, 1999.</li>
+                    <li class="list-group-item">E. Cascetta, A. Nuzzolo, F. Russo, and A. Vitetta. A modified logit route choice model overcoming path overlapping problems: specification and some calibration results for interurban networks. <i>n: Proceedings of the 13th International Symposium on Transportation and Trac Theory, Leon, France</i>, pages 697-711, 1996.</li>
+                    <li class="list-group-item">E. Castillo, J. M. Menendez, P. Jimenez, and A. Rivas. Closed form expressions for choice probabilities in the weibull case. <i>Transportation Research Part B</i>, 42(4): 373-380,, 2008.</li>
+                    <li class="list-group-item">A. Chen, S. Pravinvongvuth, X. Xu, S. Ryu, and P. Chootinan. Examining the scaling eect and overlapping problem in logit-based stochastic user equilibrium models. <i>Transportation Research Part A</i>, 46(8): 1343-1358,, 2012.</li>
+                    <li class="list-group-item">T. De La Barra, B. Perez, and J. Anez. Multidimensional path search and assignment. <i>Proceedings of the 21st PTRC Summer Annual Meeting, Manchester, England</i>, pages 307-319, 1993.</li>
+                    <li class="list-group-item">R. B. Dial. A probabilistic multipath traffic assignment model which obviates path enumeration. <i>Transportation Research</i>, 5(2): 83-111, 1971.</li>
+                    <li class="list-group-item">E. W. Dijkstra. A note on two problems in connexion with graphs. <i>Numerische Mathematik</i>, 1(1): 269-271, 1959.</li>
+                    <li class="list-group-item">R. W. Floyd. Algorithm 97: Shortest path. <i>Communications of the ACM</i>, 5(6): 345, 1962.</li>
+                    <li class="list-group-item">S. Kitthamkesorn and A. Chen. A path-size weibit stochastic user equilibrium model. <i>Transportation Research Part B</i>, 57: 378-397,, 2013.</li>
+                    <li class="list-group-item">V. K. Mishra, K. Natarajan, D. Padmanabhan, C.-P. Teo, and X. Li. On theoretical and empirical aspects of marginal distribution choice models. <i>Management Science</i>, 60(6): 1511-1531, 2014.</li>
+                    <li class="list-group-item">K. Natarajan, M. Song, and C.-P. Teo. Persistency model and its applications in choice modeling. <i>Management Science</i>, 55(3): 453-469, 2009.</li>
+                    <li class="list-group-item">J. Wardrop. Some theoretical aspects of road trac research. <i>Proceedings, Institution of Civil Engineers</i>, II(1): 325-378, 1952.</li>
+                    <li class="list-group-item">S. Warshall. A theorem on Boolean matrices. <i>Journal of the ACM</i>, 9(1): 11-12, 1962.</li>
+                    <li class="list-group-item">J. Y. Yen. Finding the <i>K</i> shortest loopless paths in a network. <i>Management Science</i>, 17(11): 712-716, 1971.</li>
+                    <li class="list-group-item">J. Q. Ying and T. Miyagi. Sensitivity analysis for stochastic user equilibrium network flows - a dual approach. <i>Transportation Science</i>, 35(2): 124-133, 2001.</li>
+                </ul>
+        </div>
+        <!-- #endregion -->
+
+        <br /> <br /> <br />
+    </div>
+
+</body>
+</html>
